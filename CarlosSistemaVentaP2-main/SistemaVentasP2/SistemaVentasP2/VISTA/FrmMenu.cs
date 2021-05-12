@@ -49,5 +49,12 @@ namespace SistemaVentasP2
             agregar.Show();
 
         }
+
+        private void tablaVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVentas ventas = new FrmVentas();
+            ventas.MdiParent = this;
+            ventas.Show();
+        }
     }
 }

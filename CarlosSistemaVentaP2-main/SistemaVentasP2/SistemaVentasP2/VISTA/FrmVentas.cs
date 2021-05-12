@@ -32,9 +32,9 @@ namespace SistemaVentasP2.VISTA
 
                     var consultadocumento = db.tb_documento.ToList();
 
-                    comboBox2.DataSource = consultadocumento;
-                    comboBox2.DisplayMember = "nombreDocumento";
-                    //comboBox2.ValueMember = "iDDocuemnto ";
+                    comboBox1.DataSource = consultadocumento;
+                    comboBox1.DisplayMember = "nombreDocumento";
+                    comboBox1.ValueMember = "iDDocumento";
                 }
                 catch (Exception ex)
                 {
@@ -42,5 +42,16 @@ namespace SistemaVentasP2.VISTA
                 }
             }
         }
+
     }
 }
+//var consultacliente = bd.tb_cliente.ToList();
+
+//cbxClient.DataSource = consultacliente;
+//cbxClient.DisplayMember = "nombreCliente";
+//cbxClient.ValueMember = "iDCliente";
+
+//var consultadocumento = bd.tb_documento.ToList();
+//cbxTdocument.DataSource = consultadocumento;
+//cbxTdocument.DisplayMember = "nombreDocumento";
+//cbxTdocument.ValueMember = "iDDocumento";
