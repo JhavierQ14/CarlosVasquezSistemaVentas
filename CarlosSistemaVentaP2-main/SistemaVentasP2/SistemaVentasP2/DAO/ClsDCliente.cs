@@ -11,10 +11,12 @@ namespace SistemaVentasP2.DAO
     class ClsDCliente
     {
 
-        public List<tb_cliente> cargarDatoUserList()
+        public List<tb_cliente> cargarComboCliente()
 
         {
             List<tb_cliente> Lista;
+
+            List<tb_cliente> tb_Cliente = new List<tb_cliente>();
 
             using (sistema_ventasEntities db = new sistema_ventasEntities())
             {

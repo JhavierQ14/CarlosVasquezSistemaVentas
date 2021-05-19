@@ -11,16 +11,17 @@ namespace SistemaVentasP2.DAO
     {
 
 
-        public List<tb_producto> cargarDatoUserList()
+        public List<tb_producto> cargarProductoFiltro(string filtro)
 
         {
-            List<tb_producto> Lista;
+            List<tb_producto> Lista = new List<tb_producto>();
 
             using (sistema_ventasEntities db = new sistema_ventasEntities())
             {
-                Lista = db.tb_producto.ToList();
-
-
+                Lista = (from listadoProductos in db.tb_producto
+                         where listadoProductos.nombreProducto.Contains(filtro)
+                         select listadoProductos).ToList();
+                //Lista = db.tb_producto.ToList();
             }
 
             return Lista;

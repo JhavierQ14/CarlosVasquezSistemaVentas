@@ -1,7 +1,7 @@
 ﻿
 namespace SistemaVentasP2
 {
-    partial class Menu
+    partial class FrmMenu
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -30,6 +30,8 @@ namespace SistemaVentasP2
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tablaVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,24 +40,37 @@ namespace SistemaVentasP2
             this.productosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tablaDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tablaDeDocuemntosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tablaVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ventasToolStripMenuItem,
             this.cliToolStripMenuItem,
             this.clienteToolStripMenuItem,
             this.productosToolStripMenuItem,
-            this.tablaDocumentosToolStripMenuItem,
-            this.ventasToolStripMenuItem});
+            this.tablaDocumentosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(883, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ventasToolStripMenuItem
+            // 
+            this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tablaVentasToolStripMenuItem});
+            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ventasToolStripMenuItem.Text = "Ventas";
+            // 
+            // tablaVentasToolStripMenuItem
+            // 
+            this.tablaVentasToolStripMenuItem.Name = "tablaVentasToolStripMenuItem";
+            this.tablaVentasToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.tablaVentasToolStripMenuItem.Text = "Abrir";
+            this.tablaVentasToolStripMenuItem.Click += new System.EventHandler(this.tablaVentasToolStripMenuItem_Click);
             // 
             // cliToolStripMenuItem
             // 
@@ -117,22 +132,7 @@ namespace SistemaVentasP2
             this.tablaDeDocuemntosToolStripMenuItem.Text = "Tabla de documentos";
             this.tablaDeDocuemntosToolStripMenuItem.Click += new System.EventHandler(this.tablaDeDocuemntosToolStripMenuItem_Click);
             // 
-            // ventasToolStripMenuItem
-            // 
-            this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tablaVentasToolStripMenuItem});
-            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.ventasToolStripMenuItem.Text = "Ventas";
-            // 
-            // tablaVentasToolStripMenuItem
-            // 
-            this.tablaVentasToolStripMenuItem.Name = "tablaVentasToolStripMenuItem";
-            this.tablaVentasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tablaVentasToolStripMenuItem.Text = "Tabla ventas";
-            this.tablaVentasToolStripMenuItem.Click += new System.EventHandler(this.tablaVentasToolStripMenuItem_Click);
-            // 
-            // Menu
+            // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -140,7 +140,7 @@ namespace SistemaVentasP2
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Menu";
+            this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú";
             this.menuStrip1.ResumeLayout(false);

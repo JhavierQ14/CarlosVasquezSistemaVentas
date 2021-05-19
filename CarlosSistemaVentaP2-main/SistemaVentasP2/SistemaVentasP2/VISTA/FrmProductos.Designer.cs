@@ -37,20 +37,19 @@ namespace SistemaVentasP2.VISTA
             this.txtPrecioProducto = new System.Windows.Forms.TextBox();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdateProducto = new System.Windows.Forms.Button();
             this.btnRemoveProducto = new System.Windows.Forms.Button();
             this.txtidProducto = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAgregarProducto
             // 
             this.btnAgregarProducto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProducto.Location = new System.Drawing.Point(151, 167);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(51, 151);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(92, 30);
             this.btnAgregarProducto.TabIndex = 13;
@@ -116,23 +115,45 @@ namespace SistemaVentasP2.VISTA
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column4,
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 233);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 216);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(520, 278);
+            this.dataGridView1.Size = new System.Drawing.Size(520, 295);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // Column4
+            // btnUpdateProducto
             // 
-            this.Column4.HeaderText = "id";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Visible = false;
+            this.btnUpdateProducto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateProducto.Location = new System.Drawing.Point(304, 151);
+            this.btnUpdateProducto.Name = "btnUpdateProducto";
+            this.btnUpdateProducto.Size = new System.Drawing.Size(88, 31);
+            this.btnUpdateProducto.TabIndex = 18;
+            this.btnUpdateProducto.Text = "Actualizar";
+            this.btnUpdateProducto.UseVisualStyleBackColor = true;
+            this.btnUpdateProducto.Click += new System.EventHandler(this.btnUpdateProducto_Click);
+            // 
+            // btnRemoveProducto
+            // 
+            this.btnRemoveProducto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveProducto.Location = new System.Drawing.Point(189, 151);
+            this.btnRemoveProducto.Name = "btnRemoveProducto";
+            this.btnRemoveProducto.Size = new System.Drawing.Size(88, 31);
+            this.btnRemoveProducto.TabIndex = 17;
+            this.btnRemoveProducto.Text = "Eliminar";
+            this.btnRemoveProducto.UseVisualStyleBackColor = true;
+            this.btnRemoveProducto.Click += new System.EventHandler(this.btnRemoveProducto_Click);
+            // 
+            // txtidProducto
+            // 
+            this.txtidProducto.Location = new System.Drawing.Point(450, 82);
+            this.txtidProducto.Name = "txtidProducto";
+            this.txtidProducto.Size = new System.Drawing.Size(61, 20);
+            this.txtidProducto.TabIndex = 19;
+            this.txtidProducto.Visible = false;
             // 
             // Column1
             // 
@@ -151,36 +172,6 @@ namespace SistemaVentasP2.VISTA
             this.Column3.HeaderText = "Estado";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            // 
-            // btnUpdateProducto
-            // 
-            this.btnUpdateProducto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateProducto.Location = new System.Drawing.Point(386, 167);
-            this.btnUpdateProducto.Name = "btnUpdateProducto";
-            this.btnUpdateProducto.Size = new System.Drawing.Size(88, 31);
-            this.btnUpdateProducto.TabIndex = 18;
-            this.btnUpdateProducto.Text = "Actualizar";
-            this.btnUpdateProducto.UseVisualStyleBackColor = true;
-            this.btnUpdateProducto.Click += new System.EventHandler(this.btnUpdateProducto_Click);
-            // 
-            // btnRemoveProducto
-            // 
-            this.btnRemoveProducto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveProducto.Location = new System.Drawing.Point(271, 167);
-            this.btnRemoveProducto.Name = "btnRemoveProducto";
-            this.btnRemoveProducto.Size = new System.Drawing.Size(88, 31);
-            this.btnRemoveProducto.TabIndex = 17;
-            this.btnRemoveProducto.Text = "Eliminar";
-            this.btnRemoveProducto.UseVisualStyleBackColor = true;
-            this.btnRemoveProducto.Click += new System.EventHandler(this.btnRemoveProducto_Click);
-            // 
-            // txtidProducto
-            // 
-            this.txtidProducto.Location = new System.Drawing.Point(450, 82);
-            this.txtidProducto.Name = "txtidProducto";
-            this.txtidProducto.Size = new System.Drawing.Size(61, 20);
-            this.txtidProducto.TabIndex = 19;
-            this.txtidProducto.Visible = false;
             // 
             // FrmProductos
             // 
@@ -220,7 +211,6 @@ namespace SistemaVentasP2.VISTA
         private System.Windows.Forms.Button btnUpdateProducto;
         private System.Windows.Forms.Button btnRemoveProducto;
         private System.Windows.Forms.TextBox txtidProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

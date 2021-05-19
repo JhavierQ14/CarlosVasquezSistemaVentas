@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using SistemaVentasP2.DAO;
 namespace SistemaVentasP2.VISTA
 {
     public partial class FrmVentas : Form
@@ -20,29 +20,44 @@ namespace SistemaVentasP2.VISTA
 
         private void FrmVentas_Load(object sender, EventArgs e)
         {
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+           
             {
-                try
-                {
-                    var consultacliente = db.tb_cliente.ToList();
+                
+                    ClsDCliente clsDClientes = new ClsDCliente();
 
-                    comboBox2.DataSource = consultacliente;
+
+
+                    comboBox2.DataSource = clsDClientes.cargarComboCliente();
                     comboBox2.DisplayMember = "nombreCliente";
                     comboBox2.ValueMember = "iDCliente";
 
-                    var consultadocumento = db.tb_documento.ToList();
 
-                    comboBox1.DataSource = consultadocumento;
+                ClsDDocumento clsDDocumento = new ClsDDocumento();
+
+                    comboBox1.DataSource = clsDDocumento.cargarDocumento();
                     comboBox1.DisplayMember = "nombreDocumento";
                     comboBox1.ValueMember = "iDDocumento";
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
+               
             }
         }
 
+        private void txtBuscar_Click(object sender, EventArgs e)
+        {
+            FrmBuscarProducto buscar = new FrmBuscarProducto();
+            buscar.Show();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            string nombre = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            string precio = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+
+
+      
+            this.Close();
+
+        }
     }
 }
 //var consultacliente = bd.tb_cliente.ToList();

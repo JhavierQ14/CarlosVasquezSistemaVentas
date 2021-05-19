@@ -11,13 +11,14 @@ using System.Windows.Forms;
 
 namespace SistemaVentasP2
 {
-    public partial class Menu : Form
+    public partial class FrmMenu : Form
     {
-        public Menu()
+        public FrmMenu()
         {
             InitializeComponent();
         }
 
+        
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmClientes clientes = new FrmClientes();
@@ -50,10 +51,9 @@ namespace SistemaVentasP2
 
         }
 
+        public static FrmVentas ventas = new FrmVentas();
         private void tablaVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmVentas ventas = new FrmVentas();
-            ventas.MdiParent = this;
             ventas.Show();
         }
     }

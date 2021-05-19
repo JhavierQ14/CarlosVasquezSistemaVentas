@@ -102,6 +102,12 @@
     <Compile Include="VISTA\FrmAgregarUsuarios.Designer.cs">
       <DependentUpon>FrmAgregarUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\FrmBuscarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmBuscarProducto.Designer.cs">
+      <DependentUpon>FrmBuscarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </Compile>
     <EmbeddedResource Include="VISTA\FrmAgregarUsuarios.resx">
       <DependentUpon>FrmAgregarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmBuscarProducto.resx">
+      <DependentUpon>FrmBuscarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>

@@ -29,7 +29,7 @@ namespace SistemaVentasP2.VISTA
             {
                 MessageBox.Show("Bienvenido");
 
-                Menu menu = new Menu();
+                FrmMenu menu = new FrmMenu();
                 //ventas.MdiParent = this;
                 menu.Show();
             }

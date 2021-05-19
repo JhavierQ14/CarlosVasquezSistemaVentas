@@ -10,10 +10,10 @@ namespace SistemaVentasP2.DAO
     {
 
 
-        public List<tb_documento> cargarDatoUserList()
+        public List<tb_documento> cargarDocumento()
 
         {
-            List<tb_documento> Lista;
+            List<tb_documento> Lista = new List<tb_documento>();
 
             using (sistema_ventasEntities db = new sistema_ventasEntities())
             {
