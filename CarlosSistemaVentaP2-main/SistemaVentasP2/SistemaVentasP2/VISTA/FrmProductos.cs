@@ -30,7 +30,7 @@ namespace SistemaVentasP2.VISTA
             txtEstadoProducto.Clear();
 
         }
-       
+
         void Carga()
         {
 
@@ -88,17 +88,16 @@ namespace SistemaVentasP2.VISTA
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            String idProducto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            String nombreProducto = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            String precioProducto = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            //String estadoProducto = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            
+            String nombreProducto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            String precioProducto = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            String estadoProducto = dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
-          
 
-            txtidProducto.Text = idProducto;
+           
             txtProducto.Text = nombreProducto;
             txtPrecioProducto.Text = precioProducto;
-            //txtEstadoProducto.Text = estadoProducto;
+            txtEstadoProducto.Text = estadoProducto;
 
 
         }
