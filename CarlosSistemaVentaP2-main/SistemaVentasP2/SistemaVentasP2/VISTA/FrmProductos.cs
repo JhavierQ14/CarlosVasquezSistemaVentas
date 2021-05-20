@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaVentasP2.MODEL;
 using SistemaVentasP2.DAO;
-using SistemaVentasP2.VISTA;
 
 namespace SistemaVentasP2.VISTA
 {
@@ -20,7 +19,6 @@ namespace SistemaVentasP2.VISTA
             InitializeComponent();
             Carga();
             clear();
-          
         }
         void clear()
         {
@@ -28,7 +26,6 @@ namespace SistemaVentasP2.VISTA
             txtProducto.Clear();
             txtPrecioProducto.Clear();
             txtEstadoProducto.Clear();
-
         }
 
         void Carga()
@@ -78,8 +75,6 @@ namespace SistemaVentasP2.VISTA
             userList.nombreProducto = txtProducto.Text;
             userList.precioProducto = txtPrecioProducto.Text;
             userList.estadoProducto = txtEstadoProducto.Text;
-
-
             clsDUserList.updateUser(userList);
 
             Carga();
@@ -88,22 +83,19 @@ namespace SistemaVentasP2.VISTA
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            String nombreProducto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            String precioProducto = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            String estadoProducto = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+
+            String idProducto = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            String nombreProducto = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            String PrecioProducto = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            String EstadoProducto = dataGridView1.CurrentRow.Cells[3].Value.ToString();
 
 
-           
+            txtidProducto.Text = idProducto;
             txtProducto.Text = nombreProducto;
-            txtPrecioProducto.Text = precioProducto;
-            txtEstadoProducto.Text = estadoProducto;
+            txtPrecioProducto.Text = PrecioProducto;
+            txtEstadoProducto.Text = EstadoProducto;
 
 
         }
-
-
-
-  
     }
 }

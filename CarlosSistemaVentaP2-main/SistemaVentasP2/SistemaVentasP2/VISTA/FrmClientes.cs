@@ -22,7 +22,6 @@ namespace SistemaVentasP2.VISTA
         }
         void clear()
         {
-
             txtIdCliente.Clear();
             txtNombreCliente.Clear();
             txtDireccionCliente.Clear();

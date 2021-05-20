@@ -40,6 +40,7 @@ namespace SistemaVentasP2.VISTA
             this.btnUpdateProducto = new System.Windows.Forms.Button();
             this.btnRemoveProducto = new System.Windows.Forms.Button();
             this.txtidProducto = new System.Windows.Forms.TextBox();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -115,6 +116,7 @@ namespace SistemaVentasP2.VISTA
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4,
             this.Column1,
             this.Column2,
             this.Column3});
@@ -154,6 +156,13 @@ namespace SistemaVentasP2.VISTA
             this.txtidProducto.Size = new System.Drawing.Size(61, 20);
             this.txtidProducto.TabIndex = 19;
             this.txtidProducto.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Id";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
             // 
             // Column1
             // 
@@ -211,6 +220,7 @@ namespace SistemaVentasP2.VISTA
         private System.Windows.Forms.Button btnUpdateProducto;
         private System.Windows.Forms.Button btnRemoveProducto;
         private System.Windows.Forms.TextBox txtidProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

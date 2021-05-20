@@ -16,7 +16,9 @@ namespace SistemaVentasP2.VISTA
         public FrmVentas()
         {
             InitializeComponent();
+          
         }
+     
 
         private void FrmVentas_Load(object sender, EventArgs e)
         {
@@ -54,7 +56,7 @@ namespace SistemaVentasP2.VISTA
             string precio = dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
 
-      
+            
             this.Close();
 
         }
