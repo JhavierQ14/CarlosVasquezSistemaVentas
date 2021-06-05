@@ -38,20 +38,27 @@ namespace SistemaVentasP2.VISTA
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBuscarProductos = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtUltimaVenta = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.txtTotalFinal = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnGuardarVenta = new System.Windows.Forms.Button();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,10 +66,12 @@ namespace SistemaVentasP2.VISTA
             // 
             this.txtCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtCantidad.Location = new System.Drawing.Point(528, 179);
+            this.txtCantidad.Location = new System.Drawing.Point(407, 179);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 20);
             this.txtCantidad.TabIndex = 35;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // label8
             // 
@@ -70,7 +79,7 @@ namespace SistemaVentasP2.VISTA
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(549, 163);
+            this.label8.Location = new System.Drawing.Point(428, 163);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 34;
@@ -80,8 +89,9 @@ namespace SistemaVentasP2.VISTA
             // 
             this.txtPrecioProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPrecioProducto.Location = new System.Drawing.Point(378, 179);
+            this.txtPrecioProducto.Location = new System.Drawing.Point(285, 179);
             this.txtPrecioProducto.Name = "txtPrecioProducto";
+            this.txtPrecioProducto.ReadOnly = true;
             this.txtPrecioProducto.Size = new System.Drawing.Size(100, 20);
             this.txtPrecioProducto.TabIndex = 33;
             // 
@@ -91,7 +101,7 @@ namespace SistemaVentasP2.VISTA
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(403, 163);
+            this.label7.Location = new System.Drawing.Point(310, 163);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 32;
@@ -101,8 +111,9 @@ namespace SistemaVentasP2.VISTA
             // 
             this.txtNombreProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtNombreProducto.Location = new System.Drawing.Point(236, 179);
+            this.txtNombreProducto.Location = new System.Drawing.Point(143, 179);
             this.txtNombreProducto.Name = "txtNombreProducto";
+            this.txtNombreProducto.ReadOnly = true;
             this.txtNombreProducto.Size = new System.Drawing.Size(100, 20);
             this.txtNombreProducto.TabIndex = 31;
             // 
@@ -112,7 +123,7 @@ namespace SistemaVentasP2.VISTA
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(233, 163);
+            this.label6.Location = new System.Drawing.Point(140, 163);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 13);
             this.label6.TabIndex = 30;
@@ -122,8 +133,9 @@ namespace SistemaVentasP2.VISTA
             // 
             this.txtCodigoProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtCodigoProducto.Location = new System.Drawing.Point(53, 179);
+            this.txtCodigoProducto.Location = new System.Drawing.Point(12, 179);
             this.txtCodigoProducto.Name = "txtCodigoProducto";
+            this.txtCodigoProducto.ReadOnly = true;
             this.txtCodigoProducto.Size = new System.Drawing.Size(100, 20);
             this.txtCodigoProducto.TabIndex = 29;
             // 
@@ -133,7 +145,7 @@ namespace SistemaVentasP2.VISTA
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(51, 163);
+            this.label5.Location = new System.Drawing.Point(28, 163);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 13);
             this.label5.TabIndex = 28;
@@ -149,14 +161,15 @@ namespace SistemaVentasP2.VISTA
             this.txtBuscar.UseVisualStyleBackColor = true;
             this.txtBuscar.Click += new System.EventHandler(this.txtBuscar_Click);
             // 
-            // textBox2
+            // txtBuscarProductos
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtBuscarProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox2.Location = new System.Drawing.Point(227, 119);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(142, 20);
-            this.textBox2.TabIndex = 26;
+            this.txtBuscarProductos.Location = new System.Drawing.Point(227, 119);
+            this.txtBuscarProductos.Name = "txtBuscarProductos";
+            this.txtBuscarProductos.Size = new System.Drawing.Size(142, 20);
+            this.txtBuscarProductos.TabIndex = 26;
+            this.txtBuscarProductos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarProductos_KeyPress);
             // 
             // label4
             // 
@@ -184,12 +197,42 @@ namespace SistemaVentasP2.VISTA
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(24, 228);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 210);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(642, 153);
+            this.dataGridView1.Size = new System.Drawing.Size(772, 233);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Código";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Precio";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Cantidad";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Total";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // label3
             // 
@@ -235,14 +278,15 @@ namespace SistemaVentasP2.VISTA
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 20;
             // 
-            // textBox1
+            // txtUltimaVenta
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtUltimaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox1.Location = new System.Drawing.Point(184, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 20);
-            this.textBox1.TabIndex = 19;
+            this.txtUltimaVenta.Enabled = false;
+            this.txtUltimaVenta.Location = new System.Drawing.Point(184, 35);
+            this.txtUltimaVenta.Name = "txtUltimaVenta";
+            this.txtUltimaVenta.Size = new System.Drawing.Size(125, 20);
+            this.txtUltimaVenta.TabIndex = 19;
             // 
             // label1
             // 
@@ -256,41 +300,84 @@ namespace SistemaVentasP2.VISTA
             this.label1.TabIndex = 18;
             this.label1.Text = "Numero de documento";
             // 
-            // Column1
+            // txtTotal
             // 
-            this.Column1.HeaderText = "Código";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.txtTotal.Location = new System.Drawing.Point(528, 179);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 36;
             // 
-            // Column2
+            // label9
             // 
-            this.Column2.HeaderText = "Nombre";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(555, 163);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Total";
             // 
-            // Column3
+            // btnAgregar
             // 
-            this.Column3.HeaderText = "Precio";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.btnAgregar.Location = new System.Drawing.Point(665, 173);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 31);
+            this.btnAgregar.TabIndex = 38;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // Column4
+            // txtTotalFinal
             // 
-            this.Column4.HeaderText = "Cantidad";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.txtTotalFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalFinal.Location = new System.Drawing.Point(642, 449);
+            this.txtTotalFinal.Name = "txtTotalFinal";
+            this.txtTotalFinal.Size = new System.Drawing.Size(142, 20);
+            this.txtTotalFinal.TabIndex = 39;
             // 
-            // Column5
+            // label10
             // 
-            this.Column5.HeaderText = "Total";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(572, 452);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 13);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Total Final";
+            // 
+            // btnGuardarVenta
+            // 
+            this.btnGuardarVenta.Location = new System.Drawing.Point(650, 474);
+            this.btnGuardarVenta.Name = "btnGuardarVenta";
+            this.btnGuardarVenta.Size = new System.Drawing.Size(134, 31);
+            this.btnGuardarVenta.TabIndex = 41;
+            this.btnGuardarVenta.Text = "Guardar venta";
+            this.btnGuardarVenta.UseVisualStyleBackColor = true;
+            this.btnGuardarVenta.Click += new System.EventHandler(this.btnGuardarVenta_Click);
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Location = new System.Drawing.Point(575, 116);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(200, 20);
+            this.dtpFecha.TabIndex = 42;
             // 
             // FrmVentas
             // 
+            this.AcceptButton = this.btnAgregar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 393);
+            this.ClientSize = new System.Drawing.Size(836, 517);
+            this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.btnGuardarVenta);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtTotalFinal);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtPrecioProducto);
@@ -300,14 +387,14 @@ namespace SistemaVentasP2.VISTA
             this.Controls.Add(this.txtCodigoProducto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtBuscarProductos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUltimaVenta);
             this.Controls.Add(this.label1);
             this.Name = "FrmVentas";
             this.Text = "FrmVentas";
@@ -320,21 +407,19 @@ namespace SistemaVentasP2.VISTA
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button txtBuscar;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBuscarProductos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUltimaVenta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -344,5 +429,13 @@ namespace SistemaVentasP2.VISTA
         public System.Windows.Forms.TextBox txtPrecioProducto;
         public System.Windows.Forms.TextBox txtNombreProducto;
         public System.Windows.Forms.TextBox txtCodigoProducto;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.TextBox txtTotalFinal;
+        private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Button btnGuardarVenta;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

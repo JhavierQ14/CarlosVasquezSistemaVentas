@@ -57,9 +57,11 @@
   <ItemGroup>
     <Compile Include="DAO\ClsAcceso.cs" />
     <Compile Include="DAO\ClsDCliente.cs" />
+    <Compile Include="DAO\ClsDDetalle.cs" />
     <Compile Include="DAO\ClsDDocumento.cs" />
     <Compile Include="DAO\ClsDProducto.cs" />
     <Compile Include="DAO\ClsDUsuario.cs" />
+    <Compile Include="DAO\ClsDVenta.cs" />
     <Compile Include="MODEL\SistemaVenta.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

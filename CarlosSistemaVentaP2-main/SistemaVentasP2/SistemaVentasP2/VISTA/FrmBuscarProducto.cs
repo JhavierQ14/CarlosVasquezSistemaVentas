@@ -42,6 +42,11 @@ namespace SistemaVentasP2.VISTA
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+           
+        }
+        void enviar()
+        {
+
             String id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             String nombre = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             String precio = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -55,12 +60,26 @@ namespace SistemaVentasP2.VISTA
             FrmMenu.ventas.txtCodigoProducto.Text = id;
             FrmMenu.ventas.txtNombreProducto.Text = nombre;
             FrmMenu.ventas.txtPrecioProducto.Text = precio;
+            FrmMenu.ventas.txtCantidad.Focus();
             this.Close();
         }
 
         private void FrmBuscarProducto_Load(object sender, EventArgs e)
         {
             cargarProductos();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            enviar();
+        }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter) {
+                enviar();
+
+            }
         }
     }
 }

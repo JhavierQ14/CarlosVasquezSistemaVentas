@@ -55,6 +55,7 @@ namespace SistemaVentasP2
         private void tablaVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ventas.Show();
+           
         }
     }
 }
